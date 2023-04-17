@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <title>Learn Kids</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="text/css" rel="stylesheet" href="indexMates.css" />
+  </head>
+  <body onload="generateQuestion()">
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+      <a class="button-session" href="#">Iniciar Sesión</a>
+    </header>
+    <div class="img-container">
+      <img src="images/sumas.png" alt="Big Image" class="small-image-izq" />
+      <div id="question"></div>
+      <div class="but-quest">
+        <button onclick="generateQuestion()">OTRA SUMA</button>
+      </div>
+    </div>
+
+    <div id="options">
+      <p>
+        <button
+          onclick="checkAnswer(document.getElementById('option1').innerHTML)"
+          id="option1"
+        >
+          Option 1: <span></span>
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="checkAnswer(document.getElementById('option2').innerHTML)"
+          id="option2"
+        >
+          Option 2: <span></span>
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="checkAnswer(document.getElementById('option3').innerHTML)"
+          id="option3"
+        >
+          Option 3: <span></span>
+        </button>
+      </p>
+      <p>
+        <button
+          onclick="checkAnswer(document.getElementById('option4').innerHTML)"
+          id="option4"
+        >
+          Option 4: <span></span>
+        </button>
+      </p>
+    </div>
+    
+    <div class="result-container">
+        
+      <img
+        src="images/correct.png"
+        alt="correct"
+        id="correct"
+        style="display: none"
+      />
+      <img
+        src="images/incorrect.png"
+        alt="incorrect"
+        id="incorrect"
+        style="display: none"
+      />
+      <div id="result" style="opacity: 0;"></div>
+    </div>
+
+    <a class="button-back" href="indexMates.html">Atrás</a>
+    <footer>
+      <p>&copy; 2023 Learn & Kids. All rights reserved.</p>
+    </footer>
+    <script src="sumas.js"></script>
+  </body>
+</html>

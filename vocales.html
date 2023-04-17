@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <title>Learn Kids</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link type="text/css" rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png"  alt="Logo"></a>
+      <a class="button-session" href="#">Iniciar Sesión</a>
+    </header>
+    <div class="img-container">
+      <img src="images/vocales.png" alt="Big Image" class="small-image-izq" />
+      <p>Selecciona vocal: </p>
+        <button onclick="getVowel('A')">A</button>
+        <button onclick="getVowel('E')">E</button>
+        <button onclick="getVowel('I')">I</button>
+        <button onclick="getVowel('O')">O</button>
+        <button onclick="getVowel('U')">U</button>
+        <p class="circle">Vocal: <span id="vowel"></span></p>
+        <button onclick="shuffleAndSelectImages()">Barajear</button>
+    </div>
+
+    
+    
+    
+    <div class="vowelImg" id="vowelImg">
+      <img src="vocales/a/Araña.png" alt="araña" data-vowel="A" id = "A" onclick="checkImage(this)" />
+      <img src="vocales/e/Estrella.png" alt="estrella" data-vowel="E" id = "E" onclick="checkImage(this)" />
+      <img src="vocales/i/Iglu.png" alt="iglu" data-vowel="I" id = "I" onclick="checkImage(this)" />
+      <img src="vocales/o/Oso.png" alt="oso" data-vowel="O" id = "O" onclick="checkImage(this)"/>
+      <img src="vocales/u/Unicornio.png" alt="unicornio" data-vowel="U" id = "U" onclick="checkImage(this)"/>
+    </div>
+    <div class="result-container">
+        
+      <img
+        src="images/correct.png"
+        alt="correct"
+        id="correct"
+        style="display: none"
+      />
+      <img
+        src="images/incorrect.png"
+        alt="incorrect"
+        id="incorrect"
+        style="display: none"
+      />
+      <div id="result" style="opacity: 0;"></div>
+    </div>
+    <a class="button-back" href="indexLengua.html">Atrás</a>
+    
+    <footer>
+      <p>&copy; 2023 Learn & Kids. All rights reserved.</p>
+    </footer>
+    <script src="vocales.js"></script>
+  </body>
+</html>
