@@ -66,7 +66,7 @@ function shuffleAndSelectImages() {
     "vocales/o/Oso.png",
     "vocales/u/Unicornio.png",
     "vocales/a/Avion.png",
-    "vocales/e/Elenfante.png",
+    "vocales/e/Elefante.png",
     "vocales/i/Iguana.png",
     "vocales/o/Oveja.png",
     "vocales/u/Uva.png",
