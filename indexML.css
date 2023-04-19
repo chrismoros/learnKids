@@ -4,6 +4,7 @@
     color: #000000;
     margin: 0;
     --headFootColor: rgb(0, 255, 1);
+    box-sizing: border-box;
 }
 
 html, body {
@@ -21,23 +22,22 @@ header {
     flex-wrap: wrap;
 }
 
-/* Style the logo */
 header img {
     height: auto;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin-left: 50px;
 }
 
 footer {
-    color: white;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 60px; /* adjust as needed */
-    justify-content: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 300px; /* adjust as needed */
+  justify-content: center;
 }
 
-/* Style the login link */
 .button-session {
     background-color: #007bff;
     color: white;
@@ -87,12 +87,10 @@ footer {
     background-color: #0062cc;
 }
 
-/* Center the container element */
 .image-container {
     text-align: center;
 }
 
-/* Style the buttons */
 .button-image {
     display: inline-block;
     border: none;
@@ -112,86 +110,65 @@ footer {
     transform: translateY(-50px);
 }
 
-/* Style the images */
 .image-container img {
     display: block;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     margin: 0 auto;
     cursor: pointer;
 }
 
-/* Style the title and paragraph */
-.title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 100px;
-    margin-left: 50px;
-    width: 1000px;
-}
-
-.paragraph {
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-}
-
-/* Create a grid layout */
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    align-items: center;
-    padding: 50px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  margin: 20px;
 }
 
-.big-image {
-    max-width: 100%;
-    height: auto;
-}
+.big-image-der {
+    display: block;
+    /* max-width: 100%; */
+    max-height: 400px ;
+    margin: 0 auto;
+    padding-right:200px;
+    /* margin:100px; */
+    width: auto;
+  }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 1200px) {
-    .title {
-        font-size: 24px;
-        width: 100%;
-    }
-
-    .paragraph {
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .title {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .paragraph {
-        margin-left: 0;
-    }
-}
+.big-image-izq {
+    display: block;
+    /* max-width: 100%; */
+    padding-top:100px;
+    padding-left:350px;
+    max-height: 300px ;
+    margin: 0 auto;
+    /* margin:100px; */
+    width: auto;
+  }
 
 @media screen and (max-width: 768px) {
-    header img {
-        width: 250px;
-        margin-left: 20px;
-    }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 
-    .button-session {
-        margin-right: 20px;
-    }
+  .big-image-izq {
+    padding-left: 0;
+  }
+
+  .big-image-der {
+    padding-right: 0;
+  }
+
+  header img {
+    margin-left: 20px;
+  }
+
+  .button-session {
+    margin-right: 20px;
+  }
+
+  .button-back {
+    margin-right: 20px;
+  }
 }
-
-@media screen and (max-width: 576px) {
-    .image-container img {
-        width: 150px;
-    }
-}
-

@@ -27,37 +27,63 @@
       name="viewport"
       content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
-    <link type="text/css" rel="stylesheet" href="index.css" />
+    <link type="text/css" rel="stylesheet" href="iijij.css" />
   </head>
   <body>
     <header>
-      <a href="index.html"><img src="images/logo.png"  alt="Logo"></a>
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
       <a class="button-session" href="#">Iniciar Sesión</a>
     </header>
     <div class="img-container">
       <img src="images/vocales.png" alt="Big Image" class="small-image-izq" />
-      <p>Selecciona vocal: </p>
-        <button onclick="getVowel('A')">A</button>
-        <button onclick="getVowel('E')">E</button>
-        <button onclick="getVowel('I')">I</button>
-        <button onclick="getVowel('O')">O</button>
-        <button onclick="getVowel('U')">U</button>
-        <p class="circle">Vocal: <span id="vowel"></span></p>
-        <button onclick="shuffleAndSelectImages()">Barajear</button>
+      <p>Selecciona vocal:</p>
+      <button onclick="getVowel('A')">A</button>
+      <button onclick="getVowel('E')">E</button>
+      <button onclick="getVowel('I')">I</button>
+      <button onclick="getVowel('O')">O</button>
+      <button onclick="getVowel('U')">U</button>
+      <p class="circle">Vocal: <span id="vowel"></span></p>
+      <button onclick="shuffleAndSelectImages()">Barajear</button>
     </div>
 
-    
-    
-    
     <div class="vowelImg" id="vowelImg">
-      <img src="vocales/a/Araña.png" alt="araña" data-vowel="A" id = "A" onclick="checkImage(this)" />
-      <img src="vocales/e/Estrella.png" alt="estrella" data-vowel="E" id = "E" onclick="checkImage(this)" />
-      <img src="vocales/i/Iglu.png" alt="iglu" data-vowel="I" id = "I" onclick="checkImage(this)" />
-      <img src="vocales/o/Oso.png" alt="oso" data-vowel="O" id = "O" onclick="checkImage(this)"/>
-      <img src="vocales/u/Unicornio.png" alt="unicornio" data-vowel="U" id = "U" onclick="checkImage(this)"/>
+      <img
+        src="vocales/a/Araña.png"
+        alt="araña"
+        data-vowel="A"
+        id="A"
+        onclick="checkImage(this)"
+      />
+      <img
+        src="vocales/e/Estrella.png"
+        alt="estrella"
+        data-vowel="E"
+        id="E"
+        onclick="checkImage(this)"
+      />
+      <img
+        src="vocales/i/Iglu.png"
+        alt="iglu"
+        data-vowel="I"
+        id="I"
+        onclick="checkImage(this)"
+      />
+      <img
+        src="vocales/o/Oso.png"
+        alt="oso"
+        data-vowel="O"
+        id="O"
+        onclick="checkImage(this)"
+      />
+      <img
+        src="vocales/u/Unicornio.png"
+        alt="unicornio"
+        data-vowel="U"
+        id="U"
+        onclick="checkImage(this)"
+      />
     </div>
     <div class="result-container">
-        
       <img
         src="images/correct.png"
         alt="correct"
@@ -70,10 +96,10 @@
         id="incorrect"
         style="display: none"
       />
-      <div id="result" style="opacity: 0;"></div>
+      <div id="result" style="opacity: 0"></div>
     </div>
     <a class="button-back" href="indexLengua.html">Atrás</a>
-    
+
     <footer>
       <p>&copy; 2023 Learn & Kids. All rights reserved.</p>
     </footer>
