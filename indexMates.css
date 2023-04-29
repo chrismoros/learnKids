@@ -9,8 +9,6 @@
 body {
   height: 100vh;
   background-color: #d3fdb1;
-  position: relative;
-  overflow: hidden;
 }
 
 #question {

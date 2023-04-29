@@ -10,8 +10,8 @@ html,
 body {
   height: 100%;
   background-color: #d3fdb1;
-  position: relative;
-  overflow: hidden;
+  /* position: relative;
+  overflow: hidden; */
 }
 
 header {
