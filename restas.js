@@ -27,15 +27,29 @@ function generateQuestion() {
     // Reset the result message
     document.getElementById("result").style.backgroundColor = "";
     document.getElementById("result").innerHTML = "";
+    document.getElementById("correct").style.display = "none";
+    document.getElementById("incorrect").style.display = "none";
 }
 
 function checkAnswer(selectedOption) {
     var correctAnswer = localStorage.getItem("correctAnswer");
+    var particles = document.getElementById("particles-js");
     if (selectedOption == correctAnswer) {
         document.getElementById("result").innerHTML = "Correcto!";
     document.getElementById("correct").style.display = "block";
     document.getElementById("incorrect").style.display = "none";
-    } else {
+    document.getElementById("good-job").style.display = "block";
+    document.getElementById("good-job").style.opacity = 1;
+    setTimeout(function () {
+      document.getElementById("good-job").style.opacity = 0;
+    }, 3000);
+    particles.style.display = "block";
+    particlesJS.load("particles-js", "particles.json", function () {
+      setTimeout(function () {
+        particles.style.display = "none";
+      }, 3000);
+    });    
+} else {
         document.getElementById("result").innerHTML = "Incorrecto. Prueba otra vez!";
     document.getElementById("correct").style.display = "none";
     document.getElementById("incorrect").style.display = "block";

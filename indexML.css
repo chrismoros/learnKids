@@ -10,6 +10,7 @@
 html, body {
     height: 100%;
     background-color: #d3fdb1;
+
 }
 
 header {
@@ -147,7 +148,7 @@ footer {
     width: auto;
   }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -169,3 +170,4 @@ footer {
   }
 
 }
+

@@ -45,10 +45,23 @@ function checkImage(img) {
     .toLowerCase()
     .charAt(img.src.toLowerCase().lastIndexOf("/") + 1)
     .charAt(0);
+  var particles = document.getElementById("particles-js");
+
   if (selectedOption === correctAnswer) {
     document.getElementById("result").innerHTML = "Correcto!";
     document.getElementById("correct").style.display = "block";
     document.getElementById("incorrect").style.display = "none";
+    document.getElementById("good-job").style.display = "block";
+    document.getElementById("good-job").style.opacity = 1;
+    setTimeout(function () {
+      document.getElementById("good-job").style.opacity = 0;
+    }, 3000);
+    particles.style.display = "block";
+    particlesJS.load("particles-js", "particles.json", function () {
+      setTimeout(function () {
+        particles.style.display = "none";
+      }, 3000);
+    });
   } else {
     document.getElementById("result").innerHTML =
       "Incorrecto. Prueba otra vez!";
@@ -75,6 +88,8 @@ function shuffleAndSelectImages() {
   for (var i = 0; i < imageContainer.children.length; i++) {
     imageContainer.children[i].src = images[i];
   }
+  document.getElementById("correct").style.display = "none";
+  document.getElementById("incorrect").style.display = "none";
 }
 
 function shuffleArray(array) {

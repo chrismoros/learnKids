@@ -9,6 +9,8 @@
 body {
   height: 100vh;
   background-color: #d3fdb1;
+  position: relative;
+  overflow: hidden;
 }
 
 #question {
@@ -21,6 +23,17 @@ body {
   align-items: center;
   justify-content: center;
   margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+#options button {
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #options {
+    flex-direction: column;
+  }
 }
 
 button {
@@ -168,3 +181,28 @@ footer {
   margin: auto;
 }
 
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+#good-job {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  z-index: 11;
+  opacity: 0;
+  border: 2px solid rgb(12, 194, 88);
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(10, 202, 74, 0.5);
+}
